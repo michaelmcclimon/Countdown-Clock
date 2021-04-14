@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+          p {
+            text-align: center;
+            font-size: 60px;
+            margin-top: 0px;
+          }
+          img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+    </style>
+ </head>
+
+ <p id="Clock"></p>
+
+<p>Days Until The Last Bitcoin Will Be Mined</p>
+<br><br>
+
+
+<br><br>
+<P>Made by Michael McClimon</p>
+
+<img src="https://michaelmcclimon.files.wordpress.com/2020/12/dsc00426.jpg"/>
+<p>GitHub link Below</p>
+<p style="text-align:center">
+
+<a href="https://github.com/michaelmcclimon">Click Here!</a></p>
+<!-- Setting up my Clock so you can see it on the webpage.-->
+
+<script>
+//Date of last Bitcoin mined (this is an estimate!)
+var finalDate = new Date("Jan 5, 2140 15:55:35").getTime();
+
+//Updating countdown every 1 second
+var m = setInterval(function(){
+
+var rightNow = new Date().getTime();
+var distance = finalDate - rightNow;
+
+//time calculations for days, hours, minutes, and seconds
+
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+//displaying the clock on the webpage
+document.getElementById("Clock").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+
+//for when the clock is finished and im dead and gone!
+if (distance < 0) {
+  clearInterval(m);
+  document.getElementById("Clock").innerHTML = "EXPIRED";
+}
+}, 1000);
+
+
+</script>
+
+
+
+</html>
