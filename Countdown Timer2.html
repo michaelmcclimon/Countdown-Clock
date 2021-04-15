@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
     <style>
           p {
             text-align: center;
@@ -13,6 +15,14 @@
             margin-left: auto;
             margin-right: auto;
           }
+          button {
+            background-color: #CF142B; /* Red */
+            color: white;
+            padding; 32px 16px;
+            text-align: center;
+            font-size: 24px;
+            width: 50%;
+          }
     </style>
  </head>
 
@@ -21,6 +31,10 @@
 <p>Days Until The Last Bitcoin Will Be Mined</p>
 <br><br>
 
+<div style="text-align:center">
+<button id="stop">Stop Countdown</button>
+</div>
+<br><br>
 
 <br><br>
 <P>Made by Michael McClimon</p>
@@ -59,7 +73,9 @@ if (distance < 0) {
   document.getElementById("Clock").innerHTML = "EXPIRED";
 }
 }, 1000);
-  
+
 </script>
+
+
 
 </html>
