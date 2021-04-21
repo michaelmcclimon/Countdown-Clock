@@ -69,10 +69,25 @@ document.getElementById("Clock").innerHTML = days + "d " + hours + "h " + minute
 
 //for when the clock is finished and im dead and gone!
 if (distance < 0) {
-  clearInterval(m);
+  let m = clearInterval(m);
   document.getElementById("Clock").innerHTML = "EXPIRED";
 }
 }, 1000);
+
+
+let timerId;
+timer();
+timerId = setInterval(timer, 1000);
+
+function stopTimer() {
+    clearInterval(m);
+    console.log("time's up", diff)
+};
+
+
+
+
+
 
 </script>
 
