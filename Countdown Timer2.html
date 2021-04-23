@@ -32,7 +32,7 @@
 <br><br>
 
 <div style="text-align:center">
-<button id="stop">Stop Countdown</button>
+<button id=stop>Stop Countdown</button>
 </div>
 <br><br>
 
@@ -74,18 +74,13 @@ if (distance < 0) {
 }
 }, 1000);
 
-
-let timerId;
-timer();
-timerId = setInterval(timer, 1000);
-
-function stopTimer() {
-    clearInterval(m);
-    console.log("time's up", diff)
-};
-
-
-
+$("#stop").click(function () {
+     stopTimer();
+   });
+   function stopTimer() {
+     clearInterval(m);
+     console.log("time's up", diff);
+   }
 
 
 
